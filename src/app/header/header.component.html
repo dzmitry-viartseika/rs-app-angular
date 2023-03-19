@@ -1,0 +1,30 @@
+<div>
+    <header class="header">
+        <div class="flex items-center justify-center">
+            <app-logo></app-logo>
+            <div class="header-login">
+                <input type="text" [(ngModel)]="searchText">
+                <button (click)="handleClickSearch()">Search</button>
+            </div>
+            <div>
+                <app-settings-button (click)="toggle()" ></app-settings-button>
+            </div>
+        </div>
+        <div class="flex items-center justify-center" *ngIf="isVisibleFilterSettings">
+            <div>
+                Sorting by:
+            </div>
+            <div (click)="handleClickDate()">
+                date
+            </div>
+            <div (click)="handleClickViews()">
+                count of views
+            </div>
+            <div>
+                by word or sentance
+                <input type="text">
+                <app-button-component></app-button-component>
+            </div>
+        </div>
+    </header>
+</div>
