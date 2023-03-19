@@ -13,6 +13,7 @@ dist-ssr
 coverage
 public
 *.local
+*.angular
 
 # Editor directories and files
 .vscode/*
